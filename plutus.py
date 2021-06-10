@@ -9,7 +9,7 @@ import binascii
 import multiprocessing
 from ellipticcurve.privateKey import PrivateKey
 
-DATABASE = r'database/MAR_23_2019/'
+DATABASE = r'database/JUNE_9_2021/'
 
 def generate_private_key(): 
 	"""
@@ -17,7 +17,7 @@ def generate_private_key():
 	generated Bitcoin private key.
 	Average Time: 0.0000061659 seconds
 	"""
-	return binascii.hexlify(os.urandom(32)).decode('utf-8').upper()
+	return os.urandom(32)
 
 def private_key_to_public_key(private_key):
 	"""
@@ -102,12 +102,15 @@ def main(database):
 	one process.
 	"""
 	while True:
-		private_key = generate_private_key()			# 0.0000061659 seconds
-		public_key = private_key_to_public_key(private_key) 	# 0.0031567731 seconds
-		address = public_key_to_address(public_key)		# 0.0000801390 seconds
-		process(private_key, public_key, address, database) 	# 0.0000026941 seconds
-									# --------------------
-									# 0.0032457721 seconds
+		base_key = generate_private_key()			# 0.0000061659 seconds
+		lsbs = int.from_bytes(base_key[-4:],'big')
+
+		for i in range(10000000):
+			private_key =  binascii.hexlify(base_key[:56]+binascii.hexlify((lsbs+i).to_bytes(4,'big'))).decode('utf-8').upper()
+			public_key = private_key_to_public_key(private_key) 	# 0.0031567731 seconds
+			address = public_key_to_address(public_key)		# 0.0000801390 seconds
+			process(private_key, public_key, address, database) 	# 0.0000026941 seconds
+									
 
 if __name__ == '__main__':
 	"""
@@ -131,7 +134,7 @@ if __name__ == '__main__':
 	print('DONE')
 
 	# To verify the database size, remove the # from the line below
-	#print('database size: ' + str(sum(len(i) for i in database))); quit()
+	print('database size: ' + str(sum(len(i) for i in database))); quit()
 
 	for cpu in range(multiprocessing.cpu_count()):
 		multiprocessing.Process(target = main, args = (database, )).start()

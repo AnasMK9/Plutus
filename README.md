@@ -1,10 +1,11 @@
 # Plutus Bitcoin Brute Forcer
 
 A Bitcoin wallet collider that brute forces random wallet addresses
+This repo is a fork of <a href="https://github.com/Isaacdelly/Plutus">Plutus</a>. The original program worked by generating a random private key on each iteration and looking up the address in the database. This fork tries a slightly different approach by generating a random private key and testing it alongside the next 10,000,000 private keys to find an address with balance. It also includes an updated database as of June 9th 2021.
 
 # Like This Project? Give It A Star
 
-[![](https://img.shields.io/github/stars/Isaacdelly/Plutus.svg)](https://github.com/Isaacdelly/Plutus)
+[![](https://img.shields.io/github/stars/AnasMK9/Plutus.svg)](https://github.com/AnasMK9/Plutus.git)
 
 # Dependencies
 
@@ -17,7 +18,7 @@ Minimum <a href="#memory-consumption">RAM requirements</a>
 # Installation
 
 ```
-$ git clone https://github.com/Isaacdelly/Plutus.git plutus
+$ git clone https://github.com/AnasMK9/Plutus.git plutus
 
 $ cd plutus && pip3 install -r requirements.txt
 ```
@@ -45,7 +46,7 @@ A pre-calculated database of every P2PKH Bitcoin address with a positive balance
 This program also utilizes multiprocessing through the `multiprocessing.Process()` function in order to make concurrent calculations.
 
 # Efficiency
-
+** The effeceincy of this fork has not been tested yet. **
 It takes `0.0032457721` seconds for this progam to brute force a __single__ Bitcoin address. 
 
 However, through `multiprocessing.Process()` a concurrent process is created for every CPU your computer has. So this program can brute force addresses at a speed of `0.0032457721 ÷ cpu_count()` seconds.
@@ -79,10 +80,10 @@ The memory consumption stack trace was made by using <a href="https://pypi.org/p
 
 - [X] Fixed typos/formatting
 
-- [ ] Update database
+- [X] Update database
 
 - [ ] Pickle loader
 
 - [ ] Try to fix Memory Error
 
-<a href="https://github.com/Isaacdelly/Plutus/issues">Create an issue</a> so I can add more stuff to improve
+<a href="https://github.com/AnasMK9/Plutus/issues">Create an issue</a> so I can add more stuff to improve
