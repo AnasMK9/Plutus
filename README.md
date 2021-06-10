@@ -46,7 +46,7 @@ A pre-calculated database of every P2PKH Bitcoin address with a positive balance
 This program also utilizes multiprocessing through the `multiprocessing.Process()` function in order to make concurrent calculations.
 
 # Efficiency
-** The effeceincy of this fork has not been tested yet. **
+#### Disclaimer: The effeceincy of this fork has not been tested yet.
 It takes `0.0032457721` seconds for this progam to brute force a __single__ Bitcoin address. 
 
 However, through `multiprocessing.Process()` a concurrent process is created for every CPU your computer has. So this program can brute force addresses at a speed of `0.0032457721 ÷ cpu_count()` seconds.
@@ -95,7 +95,6 @@ The memory consumption stack trace was made by using <a href="https://pypi.org/p
     BTC: bc1q7h8lzxrwqv4mm9s4nyfhuvzptpj4d9dk0wz7qs
   <img src="https://user-images.githubusercontent.com/31940622/121449800-2f93ce00-c9a3-11eb-8f58-6c554ab25f3e.png" width="300" height="300">
   
-
     BCH: qzqxznev0s30d8pu988p2lxkjsumty8qwqrtkdna3u
   <img src="https://user-images.githubusercontent.com/31940622/121449238-15a5bb80-c9a2-11eb-8615-6b2b48379e30.png" width="300" height="300">
   
