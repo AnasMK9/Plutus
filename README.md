@@ -87,3 +87,20 @@ The memory consumption stack trace was made by using <a href="https://pypi.org/p
 - [ ] Try to fix Memory Error
 
 <a href="https://github.com/AnasMK9/Plutus/issues">Create an issue</a> so I can add more stuff to improve
+# Buy me a coffee? 
+
+    DOGE: DMBjr9hGLSydewmsA27ps3tR68gVBZwtvN
+  <img src="https://user-images.githubusercontent.com/31940622/121449772-2276df00-c9a3-11eb-9915-61032c5a3201.png" width="300" height="300">
+
+    BTC: bc1q7h8lzxrwqv4mm9s4nyfhuvzptpj4d9dk0wz7qs
+  <img src="https://user-images.githubusercontent.com/31940622/121449800-2f93ce00-c9a3-11eb-8f58-6c554ab25f3e.png" width="300" height="300">
+  
+
+    BCH: qzqxznev0s30d8pu988p2lxkjsumty8qwqrtkdna3u
+  <img src="https://user-images.githubusercontent.com/31940622/121449238-15a5bb80-c9a2-11eb-8615-6b2b48379e30.png" width="300" height="300">
+  
+    ETH: 0x1D6C2746E978ED8444B7f5e34e8bc747a1E8F1F7
+  <img src="https://user-images.githubusercontent.com/31940622/121449262-1dfdf680-c9a2-11eb-830b-a2ac5c7c84be.png" width="300" height="300">
+  
+    LTC: ltc1ql0440qlhzhqatn99zk67mualrlpukggygy6hlv
+  <img src="https://user-images.githubusercontent.com/31940622/121449299-3241f380-c9a2-11eb-94fd-eaaeba0ea90c.png" width="300" height="300">
